@@ -27,7 +27,7 @@ spec:
           value: root
         - name: MYSQL_DATABASE
           valueFrom:
-            configMapKeyref:
+            configMapKeyRef:
               name: mysql-config-map
               key: MYSQL_DATABASE
 
