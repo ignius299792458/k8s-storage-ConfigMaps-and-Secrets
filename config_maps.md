@@ -75,6 +75,5 @@ mysql> select * from engineers;
 +----+------------+-----------+--------------------------+------------+------------+-----------+---------------------------+-----------+
 4 rows in set (0.004 sec)
 
-mysql>
 ```
 All working the configMap variable to new pod
