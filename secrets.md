@@ -7,8 +7,14 @@
 ```
 ➜  configsmaps_secrets git:(main) ✗ kubectl apply -f secrets.yml 
 secret/mysql-secret created
+
+➜  configsmaps_secrets git:(main) ✗ kubectl get secrets -n mysql-ns
+NAME           TYPE     DATA   AGE
+mysql-secret   Opaque   1      2m34s
+
 ➜  configsmaps_secrets git:(main) ✗ kubectl apply -f statefulset.yml 
 statefulset.apps/mysql-statefulset configured
+
 ➜  configsmaps_secrets git:(main) ✗ kubectl exec -it mysql-statefulset-0 -n mysql-ns -- bash
 E0423 01:20:24.378106   32232 websocket.go:296] Unknown stream id 1, discarding message
                                                                                        bbash-5.1# mysql -u root -p
